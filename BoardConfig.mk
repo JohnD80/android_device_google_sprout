@@ -1,6 +1,6 @@
-LOCAL_PATH := device/google/sprout
+LOCAL_PATH := device/tct/yaris_m_gsm
 
-TARGET_BOARD_PLATFORM := mt6582
+TARGET_BOARD_PLATFORM := mt6572
 TARGET_CPU_ABI := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
 ARCH_ARM_HAVE_VFP := true
@@ -24,15 +24,16 @@ BOARD_KERNEL_BASE := 0x80000000
 BOARD_KERNEL_PAGESIZE := 2048
 DEVICE_RESOLUTION := 480x854
 
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/google/sprout/bluetooth
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/tct/yaris_m_gsm/bluetooth
 
 
-TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/rootdir/root/fstab.sprout
+TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/rootdir/root/fstab.yaris_m_gsm
 
-TARGET_KERNEL_SOURCE := kernel/google/sprout
-TARGET_KERNEL_CONFIG := cyanogenmod_sprout_defconfig
+TARGET_PREBUILT_KERNEL := device/tct/yaris_m_gsm/kernel
+#TARGET_KERNEL_SOURCE := kernel/tct/yaris_m_gsm
+#TARGET_KERNEL_CONFIG := cyanogenmod_yaris_m_gsm_defconfig
 
-BOARD_RECOVERY_SWIPE := true
+#BOARD_RECOVERY_SWIPE := true
 
 # TWRP stuff
 RECOVERY_GRAPHICS_USE_LINELENGTH := true
@@ -66,10 +67,10 @@ TARGET_GLOBAL_CPPFLAGS += -mfpu=neon -mfloat-abi=softfp
 TARGET_USERIMAGES_USE_EXT4:=true
 USE_CAMERA_STUB := true
 
-BOARD_RIL_CLASS := ../../../device/google/sprout/ril/
+BOARD_RIL_CLASS := ../../../device/tct/yaris_m_gsm/ril/
 
 BOARD_SEPOLICY_DIRS += \
-    device/google/sprout/sepolicy
+    device/tct/yaris_m_gsm/sepolicy
 
 BOARD_SEPOLICY_UNION += \
     file_contexts \

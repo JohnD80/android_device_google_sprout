@@ -1,5 +1,11 @@
-/boot		   emmc		/dev/block/platform/mtk-msdc.0/by-name/boot
-/system		   ext4		/dev/block/platform/mtk-msdc.0/by-name/system
-/data		   ext4		/dev/block/platform/mtk-msdc.0/by-name/userdata
-/cache		   ext4		/dev/block/platform/mtk-msdc.0/by-name/cache
-/external_sd   vfat     /dev/block/mmcblk1p1                               /dev/block/mmcblk1   flags=display="external_sd";storage;wipeingui;removable
+# mount point	fstype    device    	[device2]
+
+/boot		    emmc		    /dev/bootimg                flags=display="Boot";backup=1
+/logo		    emmc	        /dev/logo					flags=display="Logo";backup=1
+/cache		    ext4		    /dev/block/mmcblk0p8        flags=display="Cache";wipeingui;backup=1
+/data		    ext4		    /dev/block/mmcblk0p9		flags=display="data";storage;wipeingui;backup=1
+/nvram		    emmc	        /dev/nvram					flags=display="Nvram";backup=1
+/recovery	    emmc		    /dev/recovery               flags=display="Recovery";backup=1
+/system	        ext4		    /dev/block/mmcblk0p7        flags=display="System";wipeingui;backup=1
+/custpack       ext4            /dev/block/mmcblk0p5        flags=display="Custpack";wipeingui;backup=1
+/external_sd 	auto	        /dev/block/mmcblk1p1	/dev/block/mmcblk1	flags=display="MicroSD";storage;wipeingui;removable

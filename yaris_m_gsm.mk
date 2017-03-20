@@ -63,15 +63,16 @@ PRODUCT_COPY_FILES += \
 PRODUCT_TAGS += dalvik.gc.type-precise
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/root/init.sprout.rc:root/init.sprout.rc \
+    $(LOCAL_PATH)/rootdir/root/init.mt6572.rc:root/init.mt6572.rc \
     $(LOCAL_PATH)/rootdir/root/init.protect.rc:root/init.protect.rc \
     $(LOCAL_PATH)/rootdir/root/init.modem.rc:root/init.modem.rc \
     $(LOCAL_PATH)/rootdir/root/factory_init.rc:root/factory_init.rc \
-    $(LOCAL_PATH)/rootdir/root/fstab.sprout:root/fstab.sprout \
-    $(LOCAL_PATH)/rootdir/root/ueventd.sprout.rc:root/ueventd.sprout.rc \
-    $(LOCAL_PATH)/rootdir/root/init.sprout.usb.rc:root/init.sprout.usb.rc
+    $(LOCAL_PATH)/rootdir/root/fstab.mt6572:root/fstab.mt6572 \
+    $(LOCAL_PATH)/rootdir/root/ueventd.mt6572.rc:root/ueventd.mt6572.rc \
+    $(LOCAL_PATH)/rootdir/root/init.recovery.mt6572.rc:root/init.recovery.mt6572.rc \
+    $(LOCAL_PATH)/rootdir/root/init.mt6572.usb.rc:root/init.mt6572.usb.rc
 
-DEVICE_PACKAGE_OVERLAYS := device/google/sprout/overlay
+DEVICE_PACKAGE_OVERLAYS := device/tct/yaris_m_gsm/overlay
 	
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/root/twrp.fstab:recovery/root/etc/twrp.fstab
@@ -89,7 +90,7 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.allow.mock.location=0 \
     ro.debuggable=1 \
     persist.service.adb.enable=1 \
-	ro.telephony.ril_class=SproutRIL \
+	ro.telephony.ril_class=yaris_m_gsmRIL \
     persist.service.debuggable=1
 	
 PRODUCT_PACKAGES += \
@@ -103,7 +104,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_AAPT_CONFIG := normal hdpi
 PRODUCT_AAPT_PREF_CONFIG := hdpi
 
-PRODUCT_PACKAGES += Torch
+#PRODUCT_PACKAGES += Torch
 
 # call the proprietary setup
-$(call inherit-product, vendor/google/sprout/sprout-vendor.mk)
+$(call inherit-product, vendor/tct/yaris_m_gsm/yaris_m_gsm-vendor.mk)
