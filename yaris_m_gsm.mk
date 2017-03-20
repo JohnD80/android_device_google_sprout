@@ -90,7 +90,7 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.allow.mock.location=0 \
     ro.debuggable=1 \
     persist.service.adb.enable=1 \
-	ro.telephony.ril_class=yaris_m_gsmRIL \
+	ro.telephony.ril_class=MediaTekRIL \
     persist.service.debuggable=1
 	
 PRODUCT_PACKAGES += \

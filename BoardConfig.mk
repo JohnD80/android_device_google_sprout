@@ -27,7 +27,7 @@ DEVICE_RESOLUTION := 480x854
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/tct/yaris_m_gsm/bluetooth
 
 
-TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/rootdir/root/fstab.yaris_m_gsm
+TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/rootdir/root/fstab.mt6572
 
 TARGET_PREBUILT_KERNEL := device/tct/yaris_m_gsm/kernel
 #TARGET_KERNEL_SOURCE := kernel/tct/yaris_m_gsm
